@@ -1,0 +1,45 @@
+.container {
+	margin: 100px auto;
+	height: 400px;
+	width: 425px;
+	border: 2px dashed black;
+}
+
+dd {
+	text-align: left !important;
+	margin-left: 10px;
+	align-content: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+dd.change {
+	text-align: left !important;
+	padding: 0px;
+
+}
+
+dl {
+	display: inline-block;
+}
+
+h5 {
+font-size: 14pt;
+
+}
+
+#infobox {
+	margin-top: 50px;
+	width: 400px;
+}
+
+h3 {
+	font-size: 16pt;
+	text-decoration: underline !important;
+	margin-bottom: 20px;
+}
+
+dt {
+	text-align: left !important;
+}
