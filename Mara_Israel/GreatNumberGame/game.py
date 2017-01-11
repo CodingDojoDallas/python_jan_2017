@@ -9,14 +9,14 @@ def game():
 	if session.has_key('random'):
 		session['random'] = random.randrange(1,101)
 	return render_template('index.html')
-
+	
 @app.route('/process', methods = ['POST'])
 def result():
 	reset = False
-	if int(request.form['guess']) == int(session['guess']):
-		prompt = "YAY!" + str(session['guess']) + "was the number!!!"
+	if int(request.form['guess']) == int(session['random']):
+		prompt = "YAY!" + str(session['random']) + "was the number!!!"
 		reset = True
-	elif int(request.form['guess']) < int(session['guess']):
+	elif int(request.form['guess']) < int(session['random']):
 		prompt = "Too low!"
 	else:
 		prompt = "Too high!"
