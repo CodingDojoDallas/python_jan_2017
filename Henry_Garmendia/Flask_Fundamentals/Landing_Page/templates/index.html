@@ -1,0 +1,57 @@
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Python Fundamentals</title>
+
+	<!-- NORMALIZE CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+ 	<!-- MAIN CSS -->
+ 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+
+	<!-- LIVERELOAD -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+ </head>
+ <body>
+	
+	<!-- ::MAIN CONTAINER
+	======================================== -->
+	<div class="main-container">
+		
+		<div class="container">
+
+			<!-- ::ABOUT THIS COURSE
+			======================================== -->
+			<div class="row">
+				<div class="col-md-8 col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h1 class="panel-tittle">Welcome Ninjas</h1>
+						</div><!-- //panel-heading -->
+						<div class="panel-body">
+							<h4>Python</h4>
+							<p>Python is a very popular language created in 1991, and is used for web applications, servers, information security, artificial intelligence, data science, mathematics, video games, and even robots. It is commonly used by many Fortune 500 companies and top technology startups. By the end of this track, you’ll have what it takes to begin your career in companies that use Python, or even to start your own company!</p>
+							<h4>Flask</h4>
+							<p>Flask is one of the easiest ways to bring your Python skills online. It's a great microframework used by thousands of people to create prototypes and small web apps.</p>
+							<h4>Author: {{ name }}</h4>
+						</div><!-- //panel-body -->
+					</div><!-- //panel -->
+				</div><!-- //col-md-6 -->
+			</div><!-- //row -->
+		</div><!-- //container -->
+	</div><!-- //main-container -->
+
+	<!-- jQUERY FILE-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+	<!-- MAIN JAVASCRIPT -->
+ 	<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+ </body>
+ </html>

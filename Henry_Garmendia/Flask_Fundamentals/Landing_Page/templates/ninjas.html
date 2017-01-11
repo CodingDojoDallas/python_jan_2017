@@ -1,0 +1,63 @@
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Python Fundamentals | Real Ninjas</title>
+
+	<!-- NORMALIZE CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+ 	<!-- MAIN CSS -->
+ 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+
+	<!-- LIVERELOAD -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+ </head>
+ <body>
+	
+	<!-- ::MAIN CONTAINER
+	======================================== -->
+	<div class="main-container">
+		
+		<div class="container">
+
+			<!-- ::ABOUT THIS COURSE
+			======================================== -->
+			<div class="row">
+				<div class="col-md-8 col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h1 class="panel-tittle">Real Ninjas</h1>
+						</div><!-- //panel-heading -->
+						<div class="panel-body">
+							<img src="http://www.realninjabook.com/wp-content/uploads/2010/03/sandayu-momochi-monument.jpg" alt="Sandayu Momochi">
+							<div class="panel-content">
+								<h4>Sandayu Momochi</h4>
+								<p>Sandayu Momochi was expertly skilled in ninjitsu and the use of various weapons. It is believed that he was the leader of one of the most powerful ninja clans during the Edo Period in Japan. His fame was so widespread, there was a monument built in his honor, which is pictured above. There were 3 powerful Ninja Clans which resided in the Iga Province. Sandayu Momochi was believed to be the head of the Southern Clan and ran 3 ninja schools in the area.</p>
+							</div><!-- //panel-content -->
+							<img src="http://www.realninjabook.com/wp-content/uploads/2010/03/iga-ueno-castle-2.jpg" alt="Sandayu Momochi">
+							<div class="panel-content">
+								<h4>Iga-Ueno Castle</h4>
+								<p>One of the top historical sites in Japan is the Iga-Ueno Castle. Located in Iga, where many Ninjas lived and trained during the Edo Period, this castle was once owned by the powerful landlord and governing official (known as a Daimyo) Todo Takatora. Originally built as a “defense weapon” for the area, it was later converted to a governing office after 1602. These pictures posted here were all taken by Dr. Hirohisa Oda, author of the book “Real Ninja”.</p>
+								<h4>Author: {{ name }}</h4>
+							</div><!-- //panel-content -->
+						</div><!-- //panel-body -->
+					</div><!-- //panel -->
+				</div><!-- //col-md-6 -->
+			</div><!-- //row -->
+		</div><!-- //container -->
+	</div><!-- //main-container -->
+
+	<!-- jQUERY FILE-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+	<!-- MAIN JAVASCRIPT -->
+ 	<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+ </body>
+ </html>

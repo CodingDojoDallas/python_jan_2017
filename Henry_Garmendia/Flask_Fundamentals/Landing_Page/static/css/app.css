@@ -1,0 +1,233 @@
+/* ========================================
+:::: GLOBAL SETTINGS￼ 
+======================================== */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  background: #fff;
+  /*max-width: 980px;*/
+  /*margin: 50px auto;*/
+  /*padding: 0 20px;*/
+  /*font-size: 1em;*/
+  line-height: 1.5em;
+  /*color: #8d9aa5;*/
+}
+
+a {
+  color: #3f8aBf;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3079ab;
+}
+
+a:visited {
+  color: #5a6772;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #384047;
+}
+
+ul,ol {
+  margin: 0 0 0 32px;
+  padding: 0;
+}
+
+ul, ol {
+  list-style-type: disc;
+}
+
+li {
+  padding: .35em .4em;
+  /*margin-bottom: .35em;*/
+  /*display: flex;*/
+  /*align-items: center;*/
+}
+
+input,
+button {
+  font-size: .85em;
+  padding: .65em 1em;
+  border-radius: .3em;
+  outline: 0;
+}
+
+input {
+  border: 1px solid #dcdcdc;
+  margin-right: 1em;
+}
+
+div {
+  /*margin-top: 2.8em;*/
+  /*padding: 1.5em 0 .5em;*/
+  /*border-bottom: 1px dotted #637a91;*/
+}
+
+p.description,
+p:nth-of-type(2) {
+  font-weight: normal;
+}
+
+/* Buttons */
+button {
+  color: white;
+  background: #508abc;
+  border: solid 1px;
+  border-color: rgba(0, 0, 0, .1);
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+button + button {
+  margin-left: .5em;
+}
+
+p + button {
+  background: #52bab3;
+}
+
+.list button + button {
+  background: #768da3;
+}
+
+.list li button + button {
+  background: #508abc;
+}
+
+li button:first-child {
+  margin-left: auto;
+  background: #52bab3;
+}
+
+.list li button:last-child {
+  background: #768da3;
+}
+
+li button {
+  font-size: .75em;
+  padding: .5em .65em;
+}
+
+.lens {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #8d9aa5;
+  border-radius: 5px;
+  position: absolute;
+  margin: 5px 0 0 -19px;
+}
+
+#color div {
+  box-sizing: border-box;
+  padding-top: 12px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: rgb(230,230,230);
+}
+
+span {
+  color: red;
+}
+
+/* ========================================
+:::: PAGE STYLE￼ 
+======================================== */
+.main-container {
+  margin: 60px 0 40px;
+}
+
+img {
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  display: inline-block;
+  height: 130px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 130px;
+}
+
+.panel-content {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+  width: 520px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
