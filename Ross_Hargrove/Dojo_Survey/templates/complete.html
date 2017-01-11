@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dojo Survey Complete</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/completeStyle.css') }}">
+    </head>
+    <body>
+        <div>
+            <h2>Submitted Info</h2>
+            <p>Name:</p><span>{{ name }}</span>
+            <p>Dojo Location:</p><span>{{ loc }}</span>
+            <p>Favorite Language:</p><span>{{ lang }}</span>
+            <p>Comment:</p><span>{{ comment }}</span>
+            <form action="/">
+                <button type="submit">Go Back</button>
+            </form>
+        </div>
+    </body>
+</html>
