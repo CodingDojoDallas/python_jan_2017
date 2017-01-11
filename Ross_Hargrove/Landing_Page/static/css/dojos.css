@@ -1,0 +1,15 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-color: red;
+}
+form {
+    margin-left: 42%;
+    width: 18%;
+}
+
+input {
+    margin-bottom: 5%;
+}
