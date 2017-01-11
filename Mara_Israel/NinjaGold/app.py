@@ -5,9 +5,13 @@ app = Flask(__name__)
 app.secret_key = 'mysuperdupersecretkey'
 
 timestamp = datetime.now().strftime('%Y/%m/%d %-I:%S %p')
-
 print timestamp
 
+# session['history'] = []
+# msg = {
+#     'msg':'afadfa',
+#     'class': 'red' or 'green'
+# }
 
 @app.route('/')
 def index():
