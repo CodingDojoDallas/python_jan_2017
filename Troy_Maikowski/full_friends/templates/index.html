@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Full Friends</title>
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <h1>Friends</h1>
+    <h4>Add a friend</h4>
+    <form action="/friends" method="POST">
+      <label>
+        First Name: <input type="text" name="fname">
+      </label>
+      <label>
+        Last Name: <input type="text" name="lname">
+      </label>
+      <label>
+        Email: <input type="text" name="email">
+      </label>
+      <input type="submit" value="Add Friend!">
+    </form>
+    <hr>
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+      {% for friend in data %}
+      <tr>
+        <td>{{ friend['first_name'] }}</td>
+        <td>{{ friend['last_name'] }}</td>
+        <td>{{ friend['email'] }}</td>
+        <td>
+          <form action='/friends/{{ friend['id'] }}/edit'>
+            <input type="submit" value="Edit">
+          </form>
+        </td>
+        <td>
+          <form action='/friends/{{ friend['id'] }}/delete'>
+            <input type="submit" value="Delete Friend">
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
