@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login and Register App</title>
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <h1>Welcome!</h1>
+    <p>If you are new to the site, please register. If not, log in!</p>
+    <form action="/register">
+      <input type="submit" value="Register">
+    </form>
+    <form action="/login">
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>
