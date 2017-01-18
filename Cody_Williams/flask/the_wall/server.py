@@ -20,7 +20,7 @@ def create_user():
 	password = request.form['password']
 	hashed_pw = bcrypt.generate_password_hash(password)
 
-	query = "INSERT INTO users (name, email, password, created_at, updated_at) VALUES(:name, :email, :password, NOW(), NOW());"
+	query = "INSERT INTO users (name, email, password, created_at, updated_at) VALUES (:name, :email, :password, NOW(), NOW());"
 	data = {
 		'name' : name,
 		'email' : email,
@@ -52,15 +52,15 @@ def wall():
 	query = 'SELECT name FROM users WHERE id = :id;'
 	data = {'id': session['user_id']}
 	user = mysql.query_db(query, data)
-	messages_query = "SELECT messages.content as 'message', messages.id as 'message_id', messages.created_at as 'message_date', comments.content as 'comment', comments.created_at as 'comment_date', comments.id as 'comment_id', users.name as 'message_username', comment_users.name as 'comment_username' FROM messages LEFT JOIN comments ON messages.id = comments.message_id LEFT JOIN users on users.id = messages.user_id LEFT JOIN users as comment_users on comment_users.id = comments.user_id ORDER BY messages.id;"
+	messages_query = "SELECT messages.content as 'message', messages.id as 'message_id', messages.created_at as 'message_date', comments.content as 'comment', comments.created_at as 'comment_date', comments.id as 'comment_id', users.name as 'message_username', comment_users.name as 'comment_username' FROM messages LEFT JOIN comments ON messages.id = comments.message_id LEFT JOIN users ON users.id = messages.user_id LEFT JOIN users as comment_users ON comment_users.id = comments.user_id ORDER BY messages.id;"
 	messages = mysql.query_db(messages_query)
 	new_messages = []
 	message_ids = []
 	for message in messages:
 		if message['message_id'] not in message_ids:
+			message_ids.append(message['message_id'])
 			message_obj = {}
 			message_obj['comments'] = []
-			message_ids.append(message['message_id'])
 			message_obj['message_id'] = message['message_id']
 			message_obj['message'] = message['message']
 			message_obj['message_user'] = message['message_username']
@@ -98,6 +98,7 @@ def create_comment():
 	}
 	mysql.query_db(query, data)
 	return redirect('/wall')
+
 @app.route('/logout')
 def logout():
 	session.clear()
