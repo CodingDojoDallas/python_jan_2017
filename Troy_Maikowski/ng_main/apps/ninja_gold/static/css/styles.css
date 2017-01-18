@@ -1,0 +1,16 @@
+#container {
+  margin: 0 auto;
+  width: 970px;
+}
+
+.building {
+  display: inline-block;
+  width: 200px;
+  color: red;
+}
+
+#activities {
+  width: 970px;
+  margin: 0 auto;
+  height: 200px;
+}
