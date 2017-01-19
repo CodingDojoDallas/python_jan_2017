@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Great Number Game</title>
+<!-- BOOTSTRAP -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- ADD CSS FILES -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
+    </head>
+    <body>
+    	<h1>Welcome to the Great Number Game!</h1>
+    	<h4>I am thinking of a number between 1 and 100</h4>
+    	<h4>Take a guess!</h4>
+    	<form method="post" action="/process">
+	    	<input type="text" name="guess" placeholder="type a number here">
+	    	<p><input type="submit" value="Good Luck!"></p>
+    	</form>
+    		{% if prompt %}
+    		<h1>{{ prompt }}</h1>
+    			{% if reset %}
+    				<form action='/reset' method="POST">
+ 							<input type="submit" value="Play again!">   					
+    				</form>
+    			{% endif %}
+    		{% endif %}
+    </body>
+</html>

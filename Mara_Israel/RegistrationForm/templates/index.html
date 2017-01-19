@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Register Below</h2>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <form action="/register" method="post" class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="email" placeholder="Email">
+          </div>
+        </div>
+         <div class="form-group">
+          <label for="firstname" class="col-sm-2 control-label">First Name:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="first_name" placeholder="First Name">
+          </div>
+        </div>
+         <div class="form-group">
+          <label for="lastname" class="col-sm-2 control-label">Last Name:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="last_name" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="birthdate" class="col-sm-2 control-label">Date of Birth:</label>
+          <div class="col-sm-10"> 
+            <input type="date" class="form-control" name="bday" placeholder="First Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPass" class="col-sm-2 control-label">Password:</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" name="pass" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassCon" class="col-sm-2 control-label">Confirm Password:</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" name="confirm_pass" placeholder="Confirm Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">register</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+
+<!-- 
+All fields are required and must not be blank
+First and Last Name cannot contain any numbers
+Password should be more than 8 characters
+Email should be a valid email
+Password and Password Confirmation should match
+ -->
