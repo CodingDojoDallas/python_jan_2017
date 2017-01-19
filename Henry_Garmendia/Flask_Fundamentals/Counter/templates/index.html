@@ -4,10 +4,7 @@
  <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<title>Python Fundamentals</title>
-
- 	<!-- FONTAWESOME -->
- 	<script src="https://use.fontawesome.com/41aef5863b.js"></script>
+ 	<title>Flask Fundamentals | Assignment: Counter</title>
 
  	<!-- FONTAWESOME -->
  	<script src="https://use.fontawesome.com/41aef5863b.js"></script>
@@ -20,6 +17,7 @@
 	
  	<!-- MAIN CSS -->
  	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+
  </head>
  <body>
 	
@@ -32,16 +30,18 @@
 			<!-- ::ABOUT THIS COURSE
 			======================================== -->
 			<div class="row">
-				<div class="col-md-8 col-sm-12">
+				<div class="col-md-12 col-sm-12">
 					<div class="panel panel-primary">
 						<div class="panel-heading">
-							<h1 class="panel-tittle">Welcome Ninjas</h1>
+							<h1 class="panel-tittle">Assignment: Counter</h1>
 						</div><!-- //panel-heading -->
 						<div class="panel-body">
-							<h4>Python</h4>
-							<p>Python is a very popular language created in 1991, and is used for web applications, servers, information security, artificial intelligence, data science, mathematics, video games, and even robots. It is commonly used by many Fortune 500 companies and top technology startups. By the end of this track, you’ll have what it takes to begin your career in companies that use Python, or even to start your own company!</p>
-							<h4>Flask</h4>
-							<p>Flask is one of the easiest ways to bring your Python skills online. It's a great microframework used by thousands of people to create prototypes and small web apps.</p>
+							<div class="c-box">
+								<h2 class="c-class">Counter</h2>
+								<p class="counter">Kicking <span>{{ session['counter']}}</span> times.</p>
+							</div><!-- //c-box -->
+							<form action="/kick" method="POST"><button class="btn btn-danger" type="submit">Ninja Kick <i class="fa fa-smile-o" aria-hidden="true"></i></button></form>
+							<form action="/cool" method="POST"><button class="btn btn-primary" type="submit">Reset Kick <i class="fa fa-frown-o" aria-hidden="true"></i></button></form>
 							<h4>Author: {{ name }}</h4>
 						</div><!-- //panel-body -->
 					</div><!-- //panel -->
