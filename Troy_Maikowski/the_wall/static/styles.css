@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 970px;
+  margin: 0 auto;
+}
+
+.message {
+  margin: 20px 5px;
+}
+
+.comment {
+  margin: 15px 0 15px 50px;
+}
