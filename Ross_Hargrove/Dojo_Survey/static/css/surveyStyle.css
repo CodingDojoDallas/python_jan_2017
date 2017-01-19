@@ -1,0 +1,30 @@
+body {
+    background-color: gray;
+    padding: 20%;
+}
+
+form {
+    background-color: white;
+    width: 80%;
+    padding: 2%;
+    border: 2px solid black;
+}
+
+p {
+    margin-right: 45%;
+    display: inline-block;
+}
+
+input, select {
+    display: inline-block;
+}
+
+input[name="comment"] {
+    padding: 5% 33%;
+}
+
+input[type="submit"] {
+    margin-top: 2%;
+    margin-left: 85%;
+    display: block;
+}

@@ -1,0 +1,13 @@
+* {
+    text-align: center;
+    color: white;
+    font-family: arial, sans-serif;
+}
+
+body {
+    background-color: gray;
+}
+
+h1 {
+    margin-top: 250px;
+}
