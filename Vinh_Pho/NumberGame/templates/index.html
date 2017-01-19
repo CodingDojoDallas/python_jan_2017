@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NumberGame</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+    <body>
+        <div id="box">
+            <h1>Welcome to the Greate Number Game!</h1>
+            <h4>I am thinking of a number between 1 and 100</h4>
+            <h4>Take a guess!</h4>
+            {% if not session['success'] %}
+            <p id ="fail"><span>{{session['fail']}}</span></p>
+                <form action="/guess" method="post">
+                    <input type="number" name="guess" value="">
+                    <input type="submit" name="submit" value="Submit">
+                </form>
+            {% else %}
+                <p id="good">{{session['success']}}</p>
+                <form action="/again" method="post">
+                    <input type="submit" name="submit" value="Play Again">
+                </form>
+            {% endif %}
+        </div>
+    </body>
+</html>
