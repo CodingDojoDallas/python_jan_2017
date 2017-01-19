@@ -1,0 +1,9 @@
+#container {
+  margin: 0 auto;
+  width: 970px;
+}
+
+.building {
+  display: inline-block;
+  width: 200px;
+}
