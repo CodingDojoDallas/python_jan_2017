@@ -1,0 +1,11 @@
+Open my mySQL Workbench delete any connection (just to establish a new connection).
+Click the add connection 
+Name my connection and click ok
+
+Than click my new connection to connect
+
+Then go into the editor and start typing the code below
+
+USE twitter
+
+SELECT * FROM users
