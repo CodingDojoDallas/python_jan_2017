@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ninja Gold</title>
+</head>
+<body>
+	<p>Your Gold {{ session['earn'] }}</p>
+	<form action="/process_money" action="post">
+		<h5>Farm</h5>
+		<p>(earn 10-20 golds)</p>
+		<input type="hidden" name="action" value="Farm">
+		<input type="submit" value="Find Gold!">
+	</form>
+	<form action="/process_money" action="post">
+		<h5>Cave</h5>
+		<p>(earn 5-10 golds)</p>
+		<input type="hidden" name="action" value="cave">
+		<input type="submit" value="Find Gold!">
+	</form>
+	<form action="/process_money" action="post">
+		<h5>House</h5>
+		<p>(earn 2-5 golds)</p>
+		<input type="hidden" name="action" value="house">
+		<input type="submit" value="Find Gold!">
+	</form>
+	<form action="/process_money" action="post">
+		<h5>Casino</h5>
+		<p>(earn/takes 0-50 golds)</p>
+		<input type="hidden" name="action" value="casino">
+		<input type="submit" value="Find Gold!">
+	</form>
+	<p>Activites {{activites}}</p>
+</body>
+</html>
