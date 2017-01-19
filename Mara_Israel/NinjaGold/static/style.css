@@ -1,0 +1,12 @@
+.container {
+	background: red;
+	width: 750px;
+}
+
+
+
+.col-md-12 , .col-md-3 {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+
+}
