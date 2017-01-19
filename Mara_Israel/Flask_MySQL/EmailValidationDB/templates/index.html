@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Email Validation With Database</title>
+  </head>
+  <body>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <form action="/process" method="post" class="form-horizontal">
+          Email Address: <input type="email" name="email" placeholder="Enter an email address">
+          <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+</html>
