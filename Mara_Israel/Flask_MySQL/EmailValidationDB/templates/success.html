@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Email Validation With Database</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
+  </head>
+  <body>
+   	{{ session.successmessage }}
+   	<p></p>
+  <table>
+  	<tr>
+  		<th>Email Addresses Entered:</th>
+  		<th>Created</th>
+  		<th></th>
+  	</tr>
+  	{% for email in all_emails: %}
+  	<tr>
+	    <td>{{ email['email'] }}</td>
+	    <td>{{ email['created_at'] }}</td>
+  	</tr>
+		{% endfor %} 
+	</table>   
+  </body>
+</html>
