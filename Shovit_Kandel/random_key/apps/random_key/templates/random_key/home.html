@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Key</title>
+</head>
+<body>
+	
+	<h5>Random Word (attempt # {{count}})</h5>
+	<div>{{request.session.test}}</div>
+	<form method ='post' action='/key'>
+		{% csrf_token %}
+		<!-- <input type = "hidden" name ="key"> -->
+		<input type = "submit" value="Generate">
+	</form>	
+	
+
+</body>
+</html>
