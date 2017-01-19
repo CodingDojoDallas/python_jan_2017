@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wall</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <div id="container">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <h1>The Wall</h1>
+      <a href="/logout">Logout</a>
+      <p>Post a message</p>
+      <form action='/post_message' method="POST">
+        <textarea name="post_body"></textarea>
+        <input type="submit" value="Post a message">
+      </form>
+      <hr>
+      {% for message in messages %}
+      <div class="message">
+        <h4>{{ message['full_name'] }} - {{ message['updated_at'] }}</h4>
+        <p>{{ message['message'] }}</p>
+        {% if message['user_id'] == session['id'] %}
+          <a href="/delete_message/{{ message['id'] }}">Delete Post</a>
+        {% endif %}
+          {% for comment in comments %}
+            {% if comment['message_id'] == message['id'] %}
+              <div class="comment">
+                <p><strong>{{ comment['full_name'] }} - {{ comment['created_at'] }}</strong></p>
+                <p>{{ comment['comment'] }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+      </div>
+      <form action='/add_comment' method="POST">
+        <textarea name='comment'></textarea>
+        <input type="hidden" name="post_id" value="{{ message['id'] }}">
+        <input type="submit" value="Add Comment">
+      </form>
+      <hr>
+      {% endfor %}
+    </div>
+  </body>
+</html>

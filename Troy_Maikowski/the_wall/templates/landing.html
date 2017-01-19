@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+  </head>
+  <body>
+    <h1>Welcome to the Wall</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <p>Please login or register</p>
+    <form action='/process_login' method="POST">
+      <label>
+        Email: <input type="text" name="email">
+      </label>
+      <label>
+        Password: <input type="password" name="pw">
+      </label>
+      <input type="submit" value="Login">
+    </form>
+    <form action='/register'>
+      <input type="submit" value="Register">
+    </form>
+  </body>
+</html>
