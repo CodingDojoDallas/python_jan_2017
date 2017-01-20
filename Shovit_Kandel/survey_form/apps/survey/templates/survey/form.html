@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+</head>
+<body>
+	<div>
+		<h3>Please complete survey</h3>
+		<form action ='/surveys/process' method ='post'>
+			{% csrf_token %}
+			Your Name: <input type ='text' name ='name'>
+			Dojo Location:<select name= 'location'>
+				<option name="Berkely">Berkely</option>
+				<option name="Chicago">Chicago</option>
+				<option name="Dallas">Dallas</option>
+				<option name="LosAngeles">Los Angeles</option>
+				<option name="OrangeCounty">Orange County</option>
+				<option name="Seattle">Seattle</option>
+				<option name="Silicon Valley">Silicon Valley</option>
+				<option name="WashingtonDC">Washington DC</option>
+			</select>
+			Favorite language:<select name="language">
+				<option>Swift</option>
+				<option>Ruby</option>
+				<option>Python</option>
+				<option>Mean</option>
+				<option>Lamp</option>
+				<option>C#</option>
+			</select>
+			Comment(optional):<input type="textbox" name="comment">
+			<input type ='submit' value ='Submit'>
+		</form> 
+	</div>
+</body>
+</html>
