@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>django render</title>    
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    </head>
+    <body>
+        <h3><span>Current time and date</span></h3>
+        <div class="line">
+            <span id="my"><span>{{time}}</span></span>
+<!--            <span id="t"><span>{{time}}</span></span>-->
+        </div>
+    </body>
+</html>

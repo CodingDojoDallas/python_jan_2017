@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Show Ninja</title>
+        {% load staticfiles%}
+        <link rel="stylesheet" href="{% static '/css/show.css' %}">
+        
+    </head>
+    <body>
+        {% if color == 'blue' %}
+            <h1><span style="color: blue">Leonardo</span></h1>
+            <img src="{% static '/images/Leonardo.jpg' %}" alt="Leonardo.jpg"/>
+        {% elif color == 'orange' %}
+            <h1><span style="color: orange">Michelangelo</span></h1>
+        <img src="{% static '/images/Michelangelo.jpg' %}" alt="Michelangelo.jpg"/>
+        {% elif color == 'red' %}
+            <h1><span style="color: red">Raphael</span></h1>
+            <img src="{% static '/images/Raphael.jpg' %}" alt="Raphael.jpg"/>
+        {% elif color == 'purple' %}
+            <h1><span style="color: purple">Donatello</span></h1>
+            <img src="{% static '/images/Donatello.jpg' %}" alt="Raphael.jpg"/>
+        {% else %}
+            <h1>Megan Fox</h1>
+            <img src="{% static '/images/MeganFox.jpg' %}" alt="MeganFox.jpg"/>
+        {% endif %}
+        
+        
+    </body>
+</html>

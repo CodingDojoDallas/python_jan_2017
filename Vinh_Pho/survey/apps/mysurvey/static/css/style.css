@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#box{
+    width: 600px;
+    height: auto;
+    border:1px solid coral ;
+    background-color:white;
+    margin-top: 30px;
+    margin-left: 300px;
+    padding: 10px;
+}
+label{
+    color:cornflowerblue;
+    font-weight: bold;
+    display:block;
+    width:150px;
+    float:left;
+}
+label:after { content: ": " }
+input{
+    padding: 1px;
+    margin:5px;
+    display: block;
+}
+select{
+    padding: 1px;
+    margin:5px;
+    display: block;
+   
+}
+#sbmt{
+    background-color:cornflowerblue;
+    width:100px;
+    height: 20px;
+    border-radius: 5px;
+    margin-top:30px;
+    margin-left: 210px;
+}
+form{
+    margin-top:50px;
+    margin-left:80px;
+}

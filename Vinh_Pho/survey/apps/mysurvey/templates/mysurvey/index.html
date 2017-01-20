@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Survey</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    </head>
+    <body>
+        <div id="box">
+                    <form action="/surveys/process" method="post">
+                         {% csrf_token %}
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" style="width:230px;height=20px"> 
+                        <label for="location">Dojo Location</label>
+                        <select name="location" style="height:20px">
+                            <option value="Dallas" selected>Dallas</option>
+                            <option value="Chicago" selected>Chicago</option>
+                            <option value="Seattle" selected>Seattle</option>
+                            <option value="Los Angeles" selected>Los Angeles</option>
+                            <option value="Silicon Valley" selected>Silicon Valley</option>
+                            <option value="Washington DC" selected>Washington DC</option>
+                            <option value="Berkeley" selected>Berkeley</option>
+                            <option value="Orange County" selected>Orange County</option>
+                        </select>
+                        <label for="lang">Favorite Language</label>
+                        <select name="language" style="width:119px;height:20px">
+                            <option value="Python" selected>Python</option>
+                            <option value="Ruby" selected>Ruby</option>
+                            <option value="JavaScript" selected>JavaScript</option>
+                            <option value="Java" selected>Java</option>
+                            <option value="C" selected>C</option>
+                            <option value="C#" selected>C#</option>
+                            <option value="C++" selected>C++</option>
+                            <option value="Perl" selected>Perl</option>
+                            <option value="Pascal" selected>Pascal</option>
+                            <option value="Ada" selected>Ada</option>
+                        </select>
+                        <label for="comment">Comment (optional)</label>
+                        <textarea name="comment" style="width:230px;height:100px"></textarea>
+                        <input id="sbmt" type="submit" name="submit" value="Submit">
+                    </form>
+
+                </div>
+    </body>
+</html>
