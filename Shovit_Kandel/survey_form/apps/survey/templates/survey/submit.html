@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Submitted Info</title>
+</head>
+<body>
+	<h1>Thanks for submitting this form! You have submitted this form {{request.session.count}} times now.</h1>
+	Your Name: {{request.session.name}}
+	Dojo Location: {{request.session.location}}
+	Favorite Language: {{request.session.language}}
+	Comment: {{request.session.comment}}
+	<a href ='/'><button>Go Back!</button></a>
+</body>
+</html>
