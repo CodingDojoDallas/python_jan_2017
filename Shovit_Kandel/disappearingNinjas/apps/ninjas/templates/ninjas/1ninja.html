@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Ninja</title>
+	{% load staticfiles %}
+	<<link rel='stylesheet' href="{% static 'ninjas/css/styles.css' %}">
+</head>
+<body>
+	{% if id == 'blue' %}
+	<img src = {%static 'ninjas/images/blue.jpg' %}>
+	{% elif id == 'orange' %}
+	<img src = {%static 'ninjas/images/orange.jpg' %}>
+	{% elif id == 'purple' %}
+	<img src = {%static 'ninjas/images/purple.jpg' %}>
+	{% elif id == 'red' %}
+	<img src = {%static 'ninjas/images/red.jpg' %}>
+	{% elif id == 'red' %}
+	<img src = {%static 'ninjas/images/red.jpg' %}>
+	{% else %}
+	<img src = {%static 'ninjas/images/fox.jpg' %}>
+	{% endif %}
+
+ 
+</body>
+</html>
