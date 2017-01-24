@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Page</title>
+  </head>
+  <body>
+    <h1>Show Page</h1>
+    <h2>{{ book.id }}: Title: {{ book.title }}</h2>
+    <h5>Author: {{ book.author }}</h5>
+    <hr>
+    <h3>Reviews</h3>
+    <hr>
+    {% for review in book.review_set.all %}
+    <h5>Rating: {{ review.rating }} stars</h5>
+    <p>{{ review.content }}</p>
+    {% endfor %}
+    <hr>
+    <h5>Add a review</h5>
+    <form action="{% url 'books:new_review' %}" method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="book_id" value="{{ book.id }}">
+      <p><textarea name="review_content"></textarea></p>
+      <p>Rating: <input type="number" name="rating"></p>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

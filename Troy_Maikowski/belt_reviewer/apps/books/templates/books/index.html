@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+  </head>
+  <body>
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <h1>Index</h1>
+    {% for book in books %}
+    <p>ID: {{ book.id }} - {{ book.title }}<p>
+    <p>{{ book.author }}<p>
+      {% for review in book.review_set.all %}
+      <p>{{ review.content }}</p>
+      {% endfor %}
+    {% endfor %}
+  </body>
+</html>

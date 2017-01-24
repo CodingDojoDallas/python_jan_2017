@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Ninja!</title>
+  </head>
+  <body>
+    {% load staticfiles %}
+    {% if color == 'red' %}
+      <img src="{% static 'ninjas/img/raphael.jpg' %}" />
+    {% elif color == 'purple' %}
+      <img src="{% static 'ninjas/img/donatello.jpg' %}" />
+    {% elif color == 'blue' %}
+      <img src="{% static 'ninjas/img/leonardo.jpg' %}" />
+    {% elif color == 'orange' %}
+      <img src="{% static 'ninjas/img/michelangelo.jpg' %}" />
+    {% else %}
+      <img src="{% static 'ninjas/img/notapril.jpg' %}" />
+    {% endif %}
+  </body>
+</html>
